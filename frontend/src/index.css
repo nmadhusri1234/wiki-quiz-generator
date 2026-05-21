@@ -1,71 +1,96 @@
 body {
   margin: 0;
   padding: 0;
+  background: #f4f7fb;
   font-family: Arial, sans-serif;
-  background: #f4f6f9;
 }
 
 .container {
-  padding: 30px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
 }
 
 .heading {
   text-align: center;
+  color: #222;
   margin-bottom: 30px;
-  color: #333;
 }
 
 .tabs {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .tabs button {
-  padding: 10px 20px;
-  margin-right: 10px;
+  padding: 12px 24px;
   border: none;
   background: #2563eb;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.tabs button:hover {
+  background: #1d4ed8;
 }
 
 .input-section {
+  display: flex;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 .input-section input {
-  width: 60%;
-  padding: 12px;
+  flex: 1;
+  padding: 14px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
 .input-section button {
-  padding: 12px 20px;
-  margin-left: 10px;
+  padding: 14px 24px;
   border: none;
-  background: green;
+  background: #16a34a;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background: #15803d;
 }
 
 .quiz-card {
   background: white;
-  padding: 20px;
+  padding: 25px;
+  border-radius: 12px;
   margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.quiz-card h2 {
+  margin-bottom: 20px;
+  color: #222;
 }
 
 .quiz-card pre {
   white-space: pre-wrap;
+  line-height: 1.7;
   font-size: 15px;
-  line-height: 1.6;
 }
 
 table {
   margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 th {
@@ -73,11 +98,48 @@ th {
   color: white;
 }
 
-td button {
-  padding: 8px 15px;
-  border: none;
-  background: green;
- color: white;
-  border-radius: 5px;
-  cursor: pointer;
+th,
+td {
+  padding: 12px;
+}
+
+tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.modal-content {
+  background: white;
+  width: 70%;
+  padding: 25px;
+  border-radius: 12px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal-content pre {
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
 }
