@@ -43,7 +43,7 @@ wiki-quiz-generator/
 
 ├── frontend/
 
-├── screenshots/
+├── sample_data/
 
 └── README.md
 
@@ -254,15 +254,9 @@ https://en.wikipedia.org/wiki/Gravity
 
 ---
 
-# Screenshots Included
 
-- Generate Quiz Page
-- History Page
-- Quiz Details Modal
-- Swagger API Docs
-- PostgreSQL Database Table
 
----
+
 
 # Future Improvements
 
